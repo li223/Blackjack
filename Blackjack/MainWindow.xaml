@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl x:Name="TCtrl" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="TabItem" Visibility="Visible">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="&lt;" HorizontalAlignment="Left" Margin="275,147,0,0" VerticalAlignment="Top" Width="48" Height="38" Click="Decrement_Click"/>
+                    <Button Content="&gt;" HorizontalAlignment="Left" Margin="414,147,0,0" VerticalAlignment="Top" Width="41" Height="38" Click="Increment_Click"/>
+                    <Label x:Name="NoPL" Content="1" HorizontalAlignment="Left" Margin="356,147,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <Button Content="Start" HorizontalAlignment="Left" Margin="275,218,0,0" VerticalAlignment="Top" Width="180" Height="36" Click="Start_Click"/>
+                    <Label Content="Number of Players" HorizontalAlignment="Left" Margin="312,116,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem" Visibility="Hidden">
+                <Grid Background="#FFE5E5E5">
+                    <Image x:Name="CardImg" HorizontalAlignment="Left" Height="204" Margin="280,89,0,0" VerticalAlignment="Top" Width="140"/>
+                    <Label x:Name="TotalBj" Content="Total: 0" HorizontalAlignment="Left" Margin="312,28,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <Button x:Name="Hit" Content="Hit" HorizontalAlignment="Left" Margin="260,317,0,0" VerticalAlignment="Top" Width="76" Click="Hit_Click"/>
+                    <Button x:Name="Stand" Content="Stand" HorizontalAlignment="Left" Margin="370,317,0,0" VerticalAlignment="Top" Width="75" Click="Stand_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
