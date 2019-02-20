@@ -56,8 +56,8 @@ namespace Blackjack
             var card = this.CardDeck[Rand.Next(0, this.CardDeck.Count)];
             this.CardDeck.Remove(card);
             this.CardImg.Source = new BitmapImage(new Uri($"{AppDomain.CurrentDomain.BaseDirectory}/Cards/{card.Id}"));
-            if (type == PlayerType.User) this.PlayerTotal += ((card.SecondValue != 0) && ((PlayerTotal + 11) < 22)) ? card.SecondValue : card.Value;
-            else this.CpuTotal += ((card.SecondValue != 0) && ((PlayerTotal + 11) < 22)) ? card.SecondValue : card.Value;
+            if (type == PlayerType.User) this.PlayerTotal += ((card.SecondValue != 0) && ((this.PlayerTotal + 11) < 22)) ? card.SecondValue : card.Value;
+            else this.CpuTotal += ((card.SecondValue != 0) && ((this.CpuTotal + 11) < 22)) ? card.SecondValue : card.Value;
             this.TotalBj.Content = $"Total: {PlayerTotal}";
         }
 
